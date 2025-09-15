@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "845479703425",
+    "project_id": "scuola-app",
+    "storage_bucket": "scuola-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845479703425:android:8d7664eeb781eaf5d0ae80",
+        "android_client_info": {
+          "package_name": "com.scuola.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845479703425-f2f30ddsi47v5em6i9kmct0murgob8u7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scuola.app",
+            "certificate_hash": "762744e249b745a6f2ef42acb4ae5085ffc9d7f6"
+          }
+        },
+        {
+          "client_id": "845479703425-go3qgdmtn7hbk67l2hdbafcsfg6slod9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scuola.app",
+            "certificate_hash": "4b41972acbe503ecebc3e7a692043e06ca505dce"
+          }
+        },
+        {
+          "client_id": "845479703425-mbtbcslpemfg2n7r5d6bkcj68q31pqar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scuola.app",
+            "certificate_hash": "6775b884fcd23479d2ebce91e8f32fcc6140db52"
+          }
+        },
+        {
+          "client_id": "845479703425-r1af9ufi5jo6l383i69f18i19jmjr4v1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVQ3pkZ4DQzxfPP3BlcOyFcldxvGWpp8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845479703425-r1af9ufi5jo6l383i69f18i19jmjr4v1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "845479703425-ad8ckhqrpv4c9enjd2sock8in9ed98eq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.scuola.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

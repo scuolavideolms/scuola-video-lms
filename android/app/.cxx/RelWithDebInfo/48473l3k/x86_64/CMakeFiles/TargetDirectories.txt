@@ -1,0 +1,2 @@
+/Volumes/Mac Online/FahadsApps/scuola video/android/app/.cxx/RelWithDebInfo/48473l3k/x86_64/CMakeFiles/edit_cache.dir
+/Volumes/Mac Online/FahadsApps/scuola video/android/app/.cxx/RelWithDebInfo/48473l3k/x86_64/CMakeFiles/rebuild_cache.dir

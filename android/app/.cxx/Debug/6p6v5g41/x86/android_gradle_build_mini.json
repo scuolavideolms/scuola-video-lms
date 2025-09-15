@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Volumes/Mac Online/fluttersdk/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/premiersalesprivateltd/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Volumes/Mac Online/FahadsApps/scuola video/android/app/.cxx/Debug/6p6v5g41/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/premiersalesprivateltd/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Volumes/Mac Online/FahadsApps/scuola video/android/app/.cxx/Debug/6p6v5g41/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

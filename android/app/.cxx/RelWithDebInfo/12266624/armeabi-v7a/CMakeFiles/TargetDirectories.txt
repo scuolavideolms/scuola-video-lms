@@ -1,0 +1,2 @@
+D:/scuola video/android/app/.cxx/RelWithDebInfo/12266624/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/scuola video/android/app/.cxx/RelWithDebInfo/12266624/armeabi-v7a/CMakeFiles/rebuild_cache.dir
