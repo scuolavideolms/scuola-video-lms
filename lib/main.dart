@@ -98,7 +98,6 @@ void main() async {
 
   await initializeDateFormatting();
   tz.initializeTimeZones();
-
   await Firebase.initializeApp(); // Make sure this comes after ensureInitialized()
 
   await setupFlutterNotifications();
@@ -119,9 +118,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-    //  DeviceOrientation.portraitUp,
-    ]);
+    // SystemChrome.setPreferredOrientations([
+    //   DeviceOrientation.portraitUp,
+    // ]);
 
     return MultiProvider(
       providers: [
@@ -168,8 +167,7 @@ class MyApp extends StatelessWidget {
           VerifyCodePage.pageName: (context) => const VerifyCodePage(),
           ForgetPasswordPage.pageName: (context) => const ForgetPasswordPage(),
           FilterCategoryPage.pageName: (context) => const FilterCategoryPage(),
-          SuggestedSearchPage.pageName: (context) =>
-              const SuggestedSearchPage(),
+          SuggestedSearchPage.pageName: (context) => const SuggestedSearchPage(),
           ResultSearchPage.pageName: (context) => const ResultSearchPage(),
           DetailsBlogPage.pageName: (context) => const DetailsBlogPage(),
           SingleCoursePage.pageName: (context) => const SingleCoursePage(),
@@ -201,10 +199,8 @@ class MyApp extends StatelessWidget {
           QuizInfoPage.pageName: (context) => const QuizInfoPage(),
           QuizPage.pageName: (context) => const QuizPage(),
           CertificatesPage.pageName: (context) => const CertificatesPage(),
-          CertificatesDetailsPage.pageName: (context) =>
-              const CertificatesDetailsPage(),
-          CertificatesStudentPage.pageName: (context) =>
-              const CertificatesStudentPage(),
+          CertificatesDetailsPage.pageName: (context) => const CertificatesDetailsPage(),
+          CertificatesStudentPage.pageName: (context) => const CertificatesStudentPage(),
           SubscriptionPage.pageName: (context) => const SubscriptionPage(),
           FavoritesPage.pageName: (context) => const FavoritesPage(),
           DashboardPage.pageName: (context) => const DashboardPage(),
@@ -216,14 +212,10 @@ class MyApp extends StatelessWidget {
           PaymentStatusPage.pageName: (context) => const PaymentStatusPage(),
           IpEmptyStatePage.pageName: (context) => const IpEmptyStatePage(),
           // offline pages...
-          InternetConnectionPage.pageName: (context) =>
-              const InternetConnectionPage(),
-          OfflineListCoursePage.pageName: (context) =>
-              const OfflineListCoursePage(),
-          OfflineSingleCoursePage.pageName: (context) =>
-              const OfflineSingleCoursePage(),
-          OfflineSingleContentPage.pageName: (context) =>
-              const OfflineSingleContentPage(),
+          InternetConnectionPage.pageName: (context) => const InternetConnectionPage(),
+          OfflineListCoursePage.pageName: (context) => const OfflineListCoursePage(),
+          OfflineSingleCoursePage.pageName: (context) => const OfflineSingleCoursePage(),
+          OfflineSingleContentPage.pageName: (context) => const OfflineSingleContentPage(),
           //  Terms_and_condiiton.pageNam :(context) => const Terms_and_condiiton()
         },
       ),

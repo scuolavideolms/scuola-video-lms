@@ -1,0 +1,2 @@
+C:/Users/fahad.shafiq/Downloads/ess2/android/app/.cxx/RelWithDebInfo/732t6c5b/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/fahad.shafiq/Downloads/ess2/android/app/.cxx/RelWithDebInfo/732t6c5b/armeabi-v7a/CMakeFiles/rebuild_cache.dir

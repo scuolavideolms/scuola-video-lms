@@ -16,6 +16,8 @@
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		A78619602DED56A30072A691 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A786195F2DED56A30072A691 /* StoreKit.framework */; };
+		A7F851CC2E250A0D001F8FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F851CB2E250A0D001F8FAD /* GoogleService-Info.plist */; };
+		A7F851CD2E250A0D001F8FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F851CB2E250A0D001F8FAD /* GoogleService-Info.plist */; };
 		B34FD9EE2A8D32EE005537A7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B34FD9ED2A8D32D2005537A7 /* libsqlite3.tbd */; };
 		BC96CC669E63367B4EFD10DD /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAF11BCE75096D6D66F8FB4 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,7 @@
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A786195F2DED56A30072A691 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A7F851CB2E250A0D001F8FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFB3E6DB17ED26684E4E0D5D /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		B34FD9ED2A8D32D2005537A7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B37D5A2D2B07C87B002E1E2D /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
+				A7F851CB2E250A0D001F8FAD /* GoogleService-Info.plist */,
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
@@ -262,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F851CC2E250A0D001F8FAD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +276,7 @@
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				A7F851CD2E250A0D001F8FAD /* GoogleService-Info.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);

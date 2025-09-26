@@ -1,18 +1,29 @@
+import 'package:pod_player/pod_player.dart';
+import 'package:flutter/material.dart';
+
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+
+//import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:pod_player/pod_player.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
-class PodVideoPlayerDev extends StatelessWidget {
+class PodVideoPlayerDev extends StatelessWidget
+{
   final String type;
   final String url;
 
   const PodVideoPlayerDev(this.url, this.type, {super.key});
 
   @override
-  Widget build(BuildContext context) {
-    if (type == 'youtube') {
+  Widget build(BuildContext context)
+  {
+    if (type == 'youtube')
+    {
       return VideoPlayerWidget(videoUrl: url);
-    } else {
+    }
+    else
+    {
       return PodPlayerWrapper(type: type, url: url);
     }
   }
@@ -117,3 +128,39 @@ class VideoPlayerWidget extends StatelessWidget {
     );
   }
 }
+
+// class YoutubeWebView extends StatefulWidget {
+//   @override
+//   _YoutubeWebViewState createState() => _YoutubeWebViewState();
+// }
+//
+// class _YoutubeWebViewState extends State<YoutubeWebView> {
+//   late WebViewController _controller;
+//
+//   @override
+//   void initState() {
+//     super.initState();
+//     // Initialize the WebView controller
+//     WebView.platform = SurfaceAndroidWebView();
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('YouTube Video'),
+//       ),
+//       body: WebView(
+//         initialUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Replace with your video URL
+//         javascriptMode: JavascriptMode.unrestricted,
+//         onWebViewCreated: (WebViewController webViewController) {
+//           _controller = webViewController;
+//         },
+//       ),
+//     );
+//   }
+// }
+
+
+
+

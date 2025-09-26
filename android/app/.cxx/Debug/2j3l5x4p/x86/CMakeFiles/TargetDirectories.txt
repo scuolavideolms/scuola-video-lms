@@ -1,0 +1,2 @@
+E:/Scuola/ess2/android/app/.cxx/Debug/2j3l5x4p/x86/CMakeFiles/edit_cache.dir
+E:/Scuola/ess2/android/app/.cxx/Debug/2j3l5x4p/x86/CMakeFiles/rebuild_cache.dir

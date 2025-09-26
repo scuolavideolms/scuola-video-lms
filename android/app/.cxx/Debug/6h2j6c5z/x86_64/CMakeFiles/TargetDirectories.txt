@@ -1,0 +1,2 @@
+E:/FahadsApp_updated/scuola-video-lms/android/app/.cxx/Debug/6h2j6c5z/x86_64/CMakeFiles/edit_cache.dir
+E:/FahadsApp_updated/scuola-video-lms/android/app/.cxx/Debug/6h2j6c5z/x86_64/CMakeFiles/rebuild_cache.dir

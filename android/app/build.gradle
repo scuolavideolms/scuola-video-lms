@@ -1,3 +1,12 @@
+//
+//
+//plugins {
+//    id "com.android.application"
+//    id "kotlin-android"
+//    id "dev.flutter.flutter-gradle-plugin"
+//}
+//
+//
 //def localProperties = new Properties()
 //def localPropertiesFile = rootProject.file('local.properties')
 //if (localPropertiesFile.exists()) {
@@ -6,18 +15,12 @@
 //    }
 //}
 //
-//def flutterRoot = localProperties.getProperty('flutter.sdk')
-//if (flutterRoot == null) {
-//    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
-//}
 //
 //def flutterVersionCode = localProperties.getProperty('flutter.versionCode', '1')
 //def flutterVersionName = localProperties.getProperty('flutter.versionName', '1.0')
 //
-//apply plugin: 'com.android.application'
-//apply plugin: 'kotlin-android'
+//
 //apply plugin: 'com.google.gms.google-services'
-//apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 //
 //def keystoreProperties = new Properties()
 //def keystorePropertiesFile = rootProject.file('key.properties')
@@ -29,14 +32,15 @@
 //
 //android {
 //    namespace "com.scuola.app"
-//    compileSdk 34
+//    compileSdk 35
+////    ndkVersion "29.0.13113456"
 //    ndkVersion "26.1.10909125"
 //
 //    defaultConfig {
 //        multiDexEnabled true
 //        applicationId "com.scuola.app"
 //        minSdk 21
-//        targetSdk 34
+//        targetSdk 35
 //        versionCode flutterVersionCode.toInteger()
 //        versionName flutterVersionName
 //    }
@@ -69,6 +73,8 @@
 //        }
 //    }
 //
+//
+//
 //    sourceSets {
 //        main.java.srcDirs += 'src/main/kotlin'
 //    }
@@ -85,19 +91,20 @@
 //}
 //
 //dependencies {
-//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+//    //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 //    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
 //
 //    implementation platform("com.google.firebase:firebase-bom:33.0.0")
-//    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"
+//    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
 //}
+
+
 
 plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
-
 
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
@@ -107,10 +114,8 @@ if (localPropertiesFile.exists()) {
     }
 }
 
-
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode', '1')
 def flutterVersionName = localProperties.getProperty('flutter.versionName', '1.0')
-
 
 apply plugin: 'com.google.gms.google-services'
 
@@ -125,25 +130,32 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace "com.scuola.app"
     compileSdk 35
-    ndkVersion "26.1.10909125"
+    // Updated NDK version for better 16KB page size support
+    ndkVersion "25.2.9519653"
 
     defaultConfig {
         multiDexEnabled true
         applicationId "com.scuola.app"
         minSdk 21
-        targetSdk 34
+        targetSdk 35
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+
+        // Add ndk configuration for 16KB page size support
+        ndk {
+            // Include all architectures that support 16KB pages
+            abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64', 'x86'
+        }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
         coreLibraryDesugaringEnabled true
     }
 
     kotlinOptions {
-        jvmTarget = '17'
+        jvmTarget = '11'
     }
 
     signingConfigs {
@@ -162,17 +174,26 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            // Add debug configuration
+            debuggable true
+        }
+    }
+
+    // Add packaging options to handle native libraries properly
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        pickFirst '**/libjsc.so'
+        pickFirst '**/libfbjni.so'
     }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-
     tasks.withType(JavaCompile) {
         options.compilerArgs -= '-Werror'
     }
-
 }
 
 flutter {
@@ -180,9 +201,12 @@ flutter {
 }
 
 dependencies {
-    //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
 
-    implementation platform("com.google.firebase:firebase-bom:33.0.0")
+    implementation 'com.facebook.android:facebook-android-sdk:17.0.0'
+
+
+    implementation platform("com.google.firebase:firebase-bom:33.5.1")
+
+   
     coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
 }

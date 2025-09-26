@@ -1,0 +1,2 @@
+E:/Scuola/ess2/android/app/.cxx/RelWithDebInfo/3h5b3z1s/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/Scuola/ess2/android/app/.cxx/RelWithDebInfo/3h5b3z1s/armeabi-v7a/CMakeFiles/rebuild_cache.dir

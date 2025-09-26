@@ -55,28 +55,88 @@
 //}
 
 
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//       // jcenter()
+//    }
+//}
+//buildscript {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:7.4.0'
+//        classpath 'com.google.gms:google-services:4.4.1'
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.20"
+//    }
+//}
+//
+//rootProject.buildDir = '../build'
+//subprojects {
+//    project.buildDir = "${rootProject.buildDir}/${project.name}"
+//}
+//subprojects {
+//    project.evaluationDependsOn(':app')
+//}
+//
+//tasks.register("clean", Delete) {
+//    delete rootProject.buildDir
+//}
+
+
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        // jcenter() - Deprecated, good that you commented it out
     }
 }
+
 buildscript {
+    // Define Kotlin version at top level
+    ext.kotlin_version = '1.9.22'
+
     repositories {
         google()
         mavenCentral()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.0'
-        classpath 'com.google.gms:google-services:4.4.1' // ✅ Add this line
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10"
+        // Updated to latest AGP version for 16KB page size support
+        classpath 'com.android.tools.build:gradle:8.5.2'
+
+        // Updated Google Services
+        classpath 'com.google.gms:google-services:4.4.2'
+
+        // Updated Kotlin version (use ext.kotlin_version)
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+// Configure all subprojects
+allprojects {
+    // Set Java compatibility for all projects
+    tasks.withType(JavaCompile).configureEach {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "17"
+        }
     }
 }
 
 rootProject.buildDir = '../build'
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
+
 subprojects {
     project.evaluationDependsOn(':app')
 }

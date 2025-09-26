@@ -169,7 +169,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
                       singleContentData?.title ?? '',
                       style: style16Bold(),
                     ),
-                    space(18),
+
                     if(isDripContent)...{
 
                       space(20),
@@ -208,8 +208,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
 
                           ],
                         ),
-                      )
-
+                      ),
                     }else...{
 
                       if( (singleContentData?.storage == 'upload' || singleContentData?.storage == 'external_link' || singleContentData?.storage == 's3') && videoFormats.contains(singleContentData?.fileType?.toLowerCase()) )...{
@@ -217,7 +216,7 @@ class _SingleContentPageState extends State<SingleContentPage> {
 
                         CourseVideoPlayer(singleContentData?.file ?? '', '', Constants.contentRouteObserver),
                       },
-
+                      space(15),
                       if( singleContentData?.storage == 'vimeo' || singleContentData?.storage == 'youtube' )...{
                         //YoutubePlayerScreen()
                         PodVideoPlayerDev(
