@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "E:\\FahadsApp_updated\\fluuter 3.29.0\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\fahad.shafiq\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "E:\\FahadsApp_updated\\scuola-video-lms\\android\\app\\.cxx\\Debug\\3vr3v3a6\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\fahad.shafiq\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "E:\\FahadsApp_updated\\scuola-video-lms\\android\\app\\.cxx\\Debug\\3vr3v3a6\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
